@@ -21,6 +21,7 @@ class Player(CircleShape):
         self.position += vec * PLAYER_SPEED * dt
     
     def shoot(self ):
+        # check to prevent shoot spam
         if self.timer >0 :
             return
         shot = Shot(self.position.x, self.position.y)

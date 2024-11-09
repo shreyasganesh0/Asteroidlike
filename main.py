@@ -38,7 +38,7 @@ def main():
                     sys.exit("Game over!")
                 for bullet in shots:
                     if objs.iscollision(bullet):
-                        objs.kill()
+                        objs.split()
                         bullet.kill()
         screen.fill((0,0,0))
         for player in drawable:
